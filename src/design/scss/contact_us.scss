@@ -1,0 +1,63 @@
+.contact-us {
+  margin-top: 2rem;
+  width: 50%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+
+  border-radius: 4px;
+  padding: 1rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    width: 100%;
+    margin-top: 1rem;
+    align-items: center;
+
+    .form-group {
+      margin: 0.6rem auto;
+    }
+
+    label {
+      font-family: var(--font-head);
+      font-weight: 700;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 0.4rem;
+      padding: 0.6rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .email-submit-btn {
+      margin-top: 1rem;
+      width: 100%;
+      background-color: black;
+      color: white;
+      font-family: var(--font-head);
+      font-weight: 700;
+      padding: 0.8rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-us {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact-us {
+    width: 100%;
+  }
+}

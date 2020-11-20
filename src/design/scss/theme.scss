@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.background {
+  filter: blur(4px);
+  position: absolute;
+  width: 100%;
+  height: 180%;
+  background-image: url("../../../public/swimming_pool.jpeg");
+}
+
+:root {
+  // fonts
+  --font-size: 20px;
+  --font-body: "Roboto", sans-serif;
+  --font-head: "Open Sans", sans-serif;
+  --font-helper: "Source Sans Pro", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-head);
+  font-weight: 800;
+}
+
+.foreground {
+  backdrop-filter: blur(1px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+} /* No .wrapper needed! */
