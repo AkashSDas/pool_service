@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import SweetAlert from "react-bootstrap-sweetalert";
 import * as yup from "yup";
 import FormErrors from "./form_errors";
-import { MultiInfo } from "./info";
 
 const initialFormValues = {
   name: "",
@@ -48,10 +47,11 @@ const ContactUs: React.FC = () => {
     <section className="contact-us">
       <h1>Contact Us</h1>
 
-      <MultiInfo
-        text1="99999-88888 (for emergency)"
-        text2="88888-99999 (text)"
-      />
+      <div style={{ textAlign: "center" }} className="info">
+        999-888-7777 (emergency calls)
+        <br />
+        999-888-7777 (for text)
+      </div>
 
       <Formik
         initialValues={initialFormValues}
@@ -93,7 +93,9 @@ const ContactUs: React.FC = () => {
       >
         {({ values, errors, isSubmitting }) => (
           <Form>
-            <FormErrors errors={errors} />
+            {(values.email || values.message || values.name) && errors ? (
+              <FormErrors errors={errors} />
+            ) : null}
 
             {sweetAlertJsx()}
 
@@ -113,7 +115,7 @@ const ContactUs: React.FC = () => {
                 name="email"
                 value={values.email}
                 type="email"
-                placeholder="Enter your gmail"
+                placeholder="Enter your email"
               />
             </div>
 

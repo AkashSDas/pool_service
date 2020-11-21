@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import SweetAlert from "react-bootstrap-sweetalert";
-import Info from "./info";
 import Square from "./payment_gateway";
 
 declare global {
@@ -43,9 +42,9 @@ const PaymentForm: React.FC = () => {
 
   return (
     <section className="payment">
-      <h1>Payment Form</h1>
+      <h1>Payment</h1>
 
-      <Info text="This is one time payment" />
+      <div className="info">This is one time payment</div>
 
       <SweetAlert
         success
