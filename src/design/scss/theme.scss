@@ -13,12 +13,15 @@ body {
   height: 100%;
 }
 
+body {
+  background-image: url("../../../public/swimming_pool.jpeg");
+}
+
 .background {
   filter: blur(4px);
   position: absolute;
   width: 100%;
   height: 180%;
-  background-image: url("../../../public/swimming_pool.jpeg");
 }
 
 :root {
