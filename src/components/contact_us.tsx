@@ -61,7 +61,7 @@ const ContactUs: React.FC = () => {
 
           setBtnText("🐋 Sending...");
 
-          fetch("http://localhost:3000/api/send-email", {
+          fetch("/api/send-email", {
             method: "POST",
             headers: {
               Accept: "application/json",

@@ -67,7 +67,7 @@ const Square = ({
         setBtnText("Don't refresh, your payment is in progress");
 
         //alert(`The generated nonce is:\n${nonce}`);
-        fetch("http://localhost:3000/api/process-payment", {
+        fetch("/api/process-payment", {
           method: "POST",
           headers: {
             Accept: "application/json",
